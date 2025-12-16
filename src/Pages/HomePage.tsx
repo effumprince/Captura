@@ -1,14 +1,16 @@
 
-import Hero from "../components/Hero.tsx";
-import Mission from "../components/Mission.tsx";
-export default function HomePage() {
-  return (
-    <>
-      <Hero  />
-      <Mission />
-    </>
-  );
-}
+// import Hero from "../components/Hero.tsx";
+// import Mission from "../components/Mission.tsx";
+// export default function HomePage() {
+//   return (
+//     <>
+//     <div className="">
+//       <Hero  />
+//       </div>
+//       <Mission />
+//     </>
+//   );
+// }
 
 // import Hero from "../components/Hero.tsx";
 // import Mission from "../components/Mission.tsx";
@@ -28,3 +30,36 @@ export default function HomePage() {
 //     </div>
 //   );
 // }
+
+
+import { useEffect } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Hero from "../components/Hero.tsx";
+import Mission from "../components/Mission.tsx"
+gsap.registerPlugin(ScrollTrigger);
+
+export default function App() {
+  useEffect(() => {
+    ScrollTrigger.create({
+      trigger: ".Hero",
+      start: "",
+      end: "bottom+=100% top", 
+      // pin: true,
+      // pinSpacing: true,
+      // scrub: true,
+    });
+  }, []);
+
+  return (
+    <div>
+      <div className="Hero">
+        <Hero/>
+      </div>
+
+      <div className="section-two">
+        <Mission />
+      </div>
+    </div>
+  );
+}
