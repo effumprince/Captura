@@ -32,8 +32,8 @@ function Header() {
         {/*  Logo */}
         <Link to="/" onClick={closeMenu}>
           <img
-            src="public/CAPTURA LOGO PNG.png"
-            alt="Skillitgh logo"
+            src="https://res.cloudinary.com/dszlo11rt/image/upload/v1765825496/CAPTURA_LOGO_PNG_vr2rwn.png"
+            alt="Captura logo"
             className="w-40"
           />
         </Link>
@@ -70,7 +70,7 @@ function Header() {
       >
         <ul className="flex flex-col gap-6 px-6 pt-24 py-100 bg-white ">
              <img
-            src="public/CAPTURA LOGO PNG.png"
+            src="https://res.cloudinary.com/dszlo11rt/image/upload/v1765825496/CAPTURA_LOGO_PNG_vr2rwn.png"
             alt="CAPTURA logo"
             className="w-40"
           />
@@ -79,7 +79,7 @@ function Header() {
           <li><Link to="/GalleryPage" className="hover:text-[#098A9D]" onClick={closeMenu}>Gallery</Link></li>
           <li><Link to="/ContactPage" className="hover:text-[#098A9D]" onClick={closeMenu}>Contact</Link></li>
           <li>
-            <Link to="https://hub.skillitgh.com/" onClick={closeMenu}>
+            <Link to="#" onClick={closeMenu}>
               <button className="border-2 border-[#df0312] text-[#df0312] px-4 py-2 rounded-md font-medium hover:bg-[#098A9D] hover:text-white transition-colors duration-300 flex items-center gap-1 ">
                 Register <MdArrowOutward className="mt-1" />
               </button>
